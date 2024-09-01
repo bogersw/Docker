@@ -1,10 +1,10 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.12.4-slim
+FROM python:3.12.5-slim
 
 LABEL maintainer="WalterB" \
-      version="1.0" \
-      description="Python 3.12.4"
+      version="1.0.1" \
+      description="Python 3.12.5"
 
 ENV PIP_DEFAULT_TIMEOUT=100 \
     PYTHONUNBUFFERED=1 \

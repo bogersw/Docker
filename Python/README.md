@@ -1,7 +1,7 @@
 # Dockerfile
 
-This Dockerfile can be used to create Python 3.12.4 docker images that run Jupyterlab when run as a container. There are
-two versions of the _requirements.txt_ file:
+This Dockerfile can be used to create Python 3.12.5 docker images that runs Jupyterlab when run as a container. There
+are two versions of the _requirements.txt_ file:
 
 -   **requirements_base_ds.txt**: the base Python environment with a lot of the standard data science packages (numpy,
     pandas, seaborn and so on).
@@ -17,17 +17,17 @@ Run the Docker _build_ command from the directory where the _Dockerfile_ and the
 Base environment:
 
 ```
-docker build -t python_jupyter_base_ds:v3.12.4 .
+docker build -t python_jupyter_base_ds:v3.12.5 .
 
-docker run -d -p 8889:8888 --mount type=bind,source="${PWD}"/jupyter,target=/home/jupyter --name Jupyter_base python_jupyter_base_ds:v3.12.4
+docker run -d -p 8889:8888 --mount type=bind,source="${PWD}"/jupyter,target=/home/jupyter --name Jupyter_base python_jupyter_base_ds:v3.12.5
 ```
 
 Full environment:
 
 ```
-docker build -t python_jupyter_full_ds:v3.12.4 .
+docker build -t python_jupyter_full_ds:v3.12.5 .
 
-docker run -d -p 8889:8888 --mount type=bind,source="${PWD}"/jupyter,target=/home/jupyter --name Jupyter_full python_jupyter_full_ds:v3.12.4
+docker run -d -p 8889:8888 --mount type=bind,source="${PWD}"/jupyter,target=/home/jupyter --name Jupyter_full python_jupyter_full_ds:v3.12.5
 ```
 
 The Docker _run_ command can be executed from any directory if the docker daemon is active. Make sure that a
